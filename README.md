@@ -32,6 +32,6 @@ Este é o meu portfólio pessoal desenvolvido com **HTML5**, **CSS3** e **JavaSc
 ✔️ Galeria de **projetos**, com links e descrições  
 ✔️ Formulário de **contato** com validação de campos obrigatórios  
 ✔️ **Consumo de API** para exibir dados dinâmicos (simulado com JSON)  
-✔️ Organização em pastas (`/css`, `/js`, `/assets`)  
+✔️ Organização em pastas (`/css`, `/js`, `/imagens`)  
 
 
