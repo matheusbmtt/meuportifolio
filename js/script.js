@@ -5,46 +5,44 @@ document.addEventListener('DOMContentLoaded', () => {
   // Alternar tema
   toggleBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-
-    if (body.classList.contains('dark-mode')) {
-      toggleBtn.textContent = '☀️';
-    } else {
-      toggleBtn.textContent = '🌙';
-    }
+    toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 
-  // Projetos com links para suas pastas de projeto
   const projetos = [
     {
       nome: "Cinemattos",
-      descricao: "Site de catálogo de séries, feito com HTML, CSS e JS.",
-      link: "projetos/Projeto1/index.html"  // Link para o projeto Cinemattos
+      link: "projetos/Projeto1/index.html",
+      imagem: "imagens/projeto1.jpg"
     },
     {
       nome: "JB Site",
-      descricao: "Site sobre Justin Bieber, com sua Discografia, feito com HTML e CSS.",
-      link: "projetos/projeto2/index.html"
+      link: "projetos/projeto2/index.html",
+      imagem: "imagens/projeto2.jpg"
     },
     {
       nome: "Casa do Terror",
-      descricao: "Site simples onde mostra a planta de uma casa Mal Assombrada",
-      link: "projetos/projeto3/index.html"
+      link: "projetos/projeto3/index.html",
+      imagem: "imagens/projeto3.jpg"
     }
   ];
 
   const containerProjetos = document.getElementById('lista-projetos');
+  containerProjetos.innerHTML = ''; // limpa antes
 
   projetos.forEach(p => {
     const card = document.createElement('div');
+    card.classList.add('projeto');
+
     card.innerHTML = `
-      <h3>${p.nome}</h3>
-      <p>${p.descricao}</p>
-      <a href="${p.link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      <img src="${p.imagem}" alt="${p.nome}" class="foto-projeto" />
+      <h3><a href="${p.link}" target="_blank" rel="noopener noreferrer">${p.nome}</a></h3>
+      <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="btn-ver-projeto">Ver projeto</a>
     `;
+
     containerProjetos.appendChild(card);
   });
 
-  // Validação do formulário de contato
+  // Formulário e validação (mantém igual ao seu código original)
   const form = document.getElementById('form-contato');
 
   form.addEventListener('submit', e => {
