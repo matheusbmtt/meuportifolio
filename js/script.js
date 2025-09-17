@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       nome: "JB Site",
-      link: "projetos/projeto2/index.html",
+      link: "projetos/Projeto2/index.html",
       imagem: "imagens/projeto2.jpg"
     },
     {
       nome: "Casa do Terror",
-      link: "projetos/projeto3/index.html",
+      link: "projetos/Projeto3/index.html",
       imagem: "imagens/projeto3.jpg"
     }
   ];
